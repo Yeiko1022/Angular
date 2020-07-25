@@ -29,4 +29,12 @@ export class ChatService {// responsable de comunicación entre usuarios
     return this.wsService.listen('mensaje-privado');
   }
 
+  getUsuariosActivos() {
+    return this.wsService.listen('usuarios-activos');
+  }
+
+  emitirUsuariosActivos() {
+    return this.wsService.emit('obtener-usuarios');
+  }
+
 }
