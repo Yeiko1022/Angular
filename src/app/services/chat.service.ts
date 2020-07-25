@@ -15,14 +15,18 @@ export class ChatService {// responsable de comunicación entre usuarios
 
   sendMessage(mensaje: string) {
     const payload = {
-      de: 'Yeison',
+      de: this.wsService.getUsuario().nombre,
       cuerpo: mensaje
     };
     this.wsService.emit('mensaje', payload);
-
   }
 
   getMessage() {
     return this.wsService.listen('mensaje-nuevo');
   }
+
+  getMessagePrivate() {
+    return this.wsService.listen('mensaje-privado');
+  }
+
 }

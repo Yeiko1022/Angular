@@ -1,0 +1,2 @@
+[0724/204208.231:ERROR:file_io.cc(134)] WriteFile: Se está cerrando la canalización. (0xE8)
+[0724/210515.285:ERROR:file_io.cc(134)] WriteFile: Se está cerrando la canalización. (0xE8)
